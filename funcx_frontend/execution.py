@@ -110,6 +110,13 @@ def install_python_package(package_name):
         f"sudo /local/cluster/bin/pip3 install {package_name}")
 
 
+def get_name(endpoint_id):
+    """Return the name of an endpoint given its ID
+    
+       Not currently possible but Ryan promised it would be soon.
+    """
+    return endpoint_id
+
 def fxsh(endpoint_id="3c3f0b4f-4ae4-4241-8497-d7339972ff4a", print_wait=True):
     """
     FuncX Shell - `fxsh`
@@ -125,7 +132,7 @@ def fxsh(endpoint_id="3c3f0b4f-4ae4-4241-8497-d7339972ff4a", print_wait=True):
     :param endpoint_id: Endpoint name. Must be present in config file
     :param print_wait: Print "waiting for results.." periodically while waiting.
     """
-    ps1 = f"fxsh[{endpoint_id}]$ "
+    ps1 = f"fxsh[{get_name(endpoint_id)}]$ "
     cwd = "~"
     try:
         cmd = input(ps1)
