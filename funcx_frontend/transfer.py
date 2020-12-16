@@ -3,7 +3,7 @@ import os
 
 from funcx_frontend.execution import run_console_cmd
 
-def upload_file_to_blt(endpoint_id,
+def upload_file(endpoint_id,
                        local_path=None,
                        remote_path="~",
                        username=None,
@@ -21,7 +21,7 @@ def upload_file_to_blt(endpoint_id,
     pass
 
 
-def download_file_from_blt(endpoint_id,
+def download_file(endpoint_id,
                            local_path=None,
                            remote_path="~",
                            username=None,
