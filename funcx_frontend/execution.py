@@ -98,18 +98,6 @@ def run_console_cmd(command,
                                   endpoint_id=endpoint_id)
 
 
-def install_python_package(package_name):
-    """
-    Helper function to install a python package with `pip3`
-
-    BLT Specific.
-
-    :param package_name: Package to install.
-    """
-    return run_console_cmd(
-        f"sudo /local/cluster/bin/pip3 install {package_name}")
-
-
 def get_name(endpoint_id):
     """Return the name of an endpoint given its ID
     
