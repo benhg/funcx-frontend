@@ -21,8 +21,7 @@ def cli_run():
                         "-ep",
                         type=str,
                         help="Endpoint to open interactive session on",
-                        default="3c3f0b4f-4ae4-4241-8497-d7339972ff4a",
-                        choices=list(blt_endpoints.keys()))
+                        default="3c3f0b4f-4ae4-4241-8497-d7339972ff4a")
     parser.add_argument("--verbose",
                         "-v",
                         action="store_true",
